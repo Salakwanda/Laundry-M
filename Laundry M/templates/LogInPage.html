@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/Style.css') }}"
+    />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="{{ url_for('static', filename='js/Javascripts.js') }}"></script>
+
+    <title>Login and Registration</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <span class="bg-animate" id="spanId"></span>
+
+      <span class="bg-animate2"></span>
+
+      <div class="form-box login">
+        <h2 class="header" id="header">Login</h2>
+
+        <form action="/home" method="get">
+          <div class="input-box" id="textbox1">
+            <input type="text" name="user_name" required />
+            <label>Username</label>
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box" id="textbox2">
+            <input type="password" required />
+            <label>Password</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn" id="buttonid">Login</button>
+          <div class="logreg-link" id="linkdiv">
+            <p>
+              Don't have an account?
+              <a href="" class="register-link" onclick="return animationForm()"
+                >Sign Up</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="info-text login">
+        <h2 id="header2" class="header2">Welcome Back!</h2>
+        <p id="prg" class="prg">Enter your login details to continue</p>
+      </div>
+      <div class="form-box register">
+        <h2 id="SignTitle">Sign Up</h2>
+        <form action="">
+          <div class="input-box" id="inputBoxRegister1">
+            <input type="text" required />
+            <label>Username</label>
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box" id="inputBoxRegister2">
+            <input type="email" required />
+            <label>Email</label>
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box" id="inputBoxRegister3">
+            <input type="password" required />
+            <label>Password</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+
+          <button type="submit" class="btn" id="btnRegister">Sign Up</button>
+          <div class="logreg-link" id="logInLink">
+            <p>
+              Already have an account?
+              <a href="" class="login-link" onclick="return SignUp()">Login</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="info-text register" id="RegInfo">
+        <h2>Welcome Back!</h2>
+        <p>Register your account on this page</p>
+      </div>
+    </div>
+  </body>
+</html>

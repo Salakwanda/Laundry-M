@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="{{ url_for('static', filename='js/HomePageScripts.js') }}"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/HomePage.css') }}"
+    />
+  </head>
+  <body>
+    <div class="MainDivHomePage">
+      <div class="OptionsDiv" id="OptionsDiv">
+        <i class="bx bx-menu" onclick="return expand()"></i>
+        <ul>
+          <li>Laundry Service Options:</li>
+          <hr />
+          <li>Machine Availability</li>
+          <hr />
+          <li>Appointments:</li>
+          <hr />
+          <li>Promotions</li>
+          <hr />
+          <li>Order History:</li>
+          <hr />
+          <li>Notifications</li>
+          <hr />
+          <li>Help Center:</li>
+          <hr />
+          <li>Announcements</li>
+          <hr />
+          <li>Security and Privacy Information:</li>
+        </ul>
+      </div>
+      <div class="ActionDiv">
+        <div class="navigationdiv">
+          <img
+            src="{{ url_for('static', filename='images/Profile.jpg') }}"
+            onclick="return dropDown()"
+          />
+          <i class="bx bx-bell"></i>
+          <i class="bx bxs-message"></i>
+          <h4 style="color: black">{{date_and_time}}</h4>
+          <div class="accountInfomation" id="accountInfoDiv">
+            <img src="{{ url_for('static', filename='images/Profile.jpg') }}" />
+            <h2>{{user_name}}</h2>
+            <br />
+            <hr />
+            <ul class="ListClass" id="ListClass">
+              <li id="list1">
+                <i class="bx bxs-user-account"></i>Edit Profile
+              </li>
+
+              <li id="list2"><i class="bx bx-cog"></i>Privacy Settings</li>
+
+              <li id="list3">
+                <i class="bx bxs-help-circle"></i>Support and help
+              </li>
+
+              <li id="list4"><i class="bx bx-log-out-circle"></i>Logout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
