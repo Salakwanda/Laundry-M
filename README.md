@@ -1,2 +1,2 @@
 # Laundry-M
-Laundry service system
+Flask Laundry service system 
